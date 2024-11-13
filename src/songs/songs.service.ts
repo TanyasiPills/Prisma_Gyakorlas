@@ -44,7 +44,7 @@ export class SongsService {
   }
 
   async findArtists(){
-    const content = await this.db.song.groupBy({by: ['author'], _count: {author: true}, orderBy: {_count: {author: 'desc'}}});
-    return content.map(item => ({artist: item.author,numberOfSongs: item._count.author}));
+    const content = await this.db.song.groupBy({by: ['artist'], _count: {artist: true}, orderBy: {_count: {artist: 'desc'}}});
+    return content.map(item => ({artist: item.artist,numberOfSongs: item._count.artist}));
   }
 }

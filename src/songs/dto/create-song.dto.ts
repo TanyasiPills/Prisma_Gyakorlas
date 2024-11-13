@@ -6,7 +6,7 @@ export class CreateSongDto {
   
     @IsNotEmpty()
     @IsString()
-    author: string;
+    artist: string;
   
     @IsNotEmpty()
     @IsInt()
