@@ -19,10 +19,13 @@ model Song {
   artist String
   lenght Int
   price Int 
-  rating Int 
+  rating Int
+  playlist Playlist[] 
+
 }
 
 model Playlist {
   id Int @id @default(autoincrement())
   name String
+  songs Song[]
 }
