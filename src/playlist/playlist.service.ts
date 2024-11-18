@@ -15,9 +15,6 @@ export class PlaylistService {
   create(createPlaylistDto: CreatePlaylistDto) {
     return this.db.playlist.create({data: createPlaylistDto});
   }
-
-
-
   findOne(id: number) {
     return {
       name: this.db.playlist.findFirst({where: {id}, include: {songs: true}}),
